@@ -1,7 +1,7 @@
+edu/sjsu/cmpe295/Cmpe295backendApplication.class
+edu/sjsu/cmpe295/security/UserDetailedService.class
 edu/sjsu/cmpe295/controller/UserController.class
 edu/sjsu/cmpe295/domains/User.class
-edu/sjsu/cmpe295/Cmpe295backendApplication.class
 edu/sjsu/cmpe295/repository/UserRepository.class
 edu/sjsu/cmpe295/config/SecurityConfig.class
 edu/sjsu/cmpe295/service/UserService.class
-edu/sjsu/cmpe295/security/UserDetailedService.class
