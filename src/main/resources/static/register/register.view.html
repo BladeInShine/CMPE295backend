@@ -21,7 +21,7 @@
         <p>
         <div class="form-group" ng-class="{ 'has-error': form.bmi.$dirty && form.bmi.$error.required }">
             <label for="bmi">BMI (Number)</label>
-            <input type="number" name="bmi" id="bmi" min="0" max="100"  ng-model="vm.user.bmi" required/>
+            <input type="number" name="bmi" id="bmi" min="0" max="100"  class="form-control" ng-model="vm.user.bmi" required/>
             <span ng-show="form.bmi.$dirty && form.bmi.$error.required" class="help-block">BMI is required</span>
         </div>
         <div class="form-group" ng-class="{ 'has-error': form.gender.$dirty && form.gender.$error.required }">

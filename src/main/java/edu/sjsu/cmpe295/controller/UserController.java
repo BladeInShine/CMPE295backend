@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 
 /**
  * Created by BladeInShine on 16/2/25.
@@ -39,18 +40,18 @@ public class UserController {
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)
     public String testPOST(@RequestBody User U) {
-        System.out.print(U.toString());
+        System.out.println(U.toString());
         return "IN User Controller , hello world, post";
     }
 
 
     //  /user/register
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public ResponseEntity<?> register(/*@Valid */@RequestBody User user) {
+    public ResponseEntity<?> register(@Valid @RequestBody User user) {
         User queryUser = userRepository.findOneByEmail(user.getEmail());
         if (queryUser != null) return new ResponseEntity<>("Email address already in use", HttpStatus.BAD_REQUEST);
         userService.createUser(user);
-        System.out.print("Register success");
+        System.out.println("======================Register success");
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
