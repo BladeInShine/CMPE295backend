@@ -18,7 +18,7 @@ import javax.inject.Inject;
 // http://localhost:8081/user/
 
 @RestController
-@RequestMapping("/user")
+//@RequestMapping("/user")
 public class UserController {
 
     private final Logger log = LoggerFactory.getLogger(UserController.class);
@@ -50,6 +50,7 @@ public class UserController {
         User queryUser = userRepository.findOneByEmail(user.getEmail());
         if (queryUser != null) return new ResponseEntity<>("Email address already in use", HttpStatus.BAD_REQUEST);
         userService.createUser(user);
+        System.out.print("Register success");
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

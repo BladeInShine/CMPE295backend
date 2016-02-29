@@ -27,11 +27,11 @@
         }
 
         function GetByUsername(username) {
-            return $http.get('/user/get/' + username).then(handleSuccess, handleError('Error getting user by username'));
+            return $http.get('/get/' + username).then(handleSuccess, handleError('Error getting user by username'));
         }
 
         function Create(user) { // register
-            return $http.post('/user/register/', user).then(handleSuccess, handleError('Error creating user'));
+            return $http.post('/register/', user).then(handleSuccess, handleError('Error creating user'));
         }
 
         function Update(user) {
